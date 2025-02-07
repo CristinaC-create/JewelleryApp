@@ -1,9 +1,8 @@
+Welcome to the Jewelry App! This project aims to provide a seamless and enjoyable experience for users to browse, purchase, and manage their jewelry collections. Below are the key objectives of this app:
 
 
 Objectives
 
-
-Welcome to the Jewelry App! This project aims to provide a seamless and enjoyable experience for users to browse, purchase, and manage their jewelry collections. Below are the key objectives of this app:
 
 User-Friendly Interface:
 Design an intuitive and visually appealing interface that makes it easy for users to navigate through different sections of the app.
