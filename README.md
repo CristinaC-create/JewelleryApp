@@ -1,4 +1,4 @@
-Welcome to the Jewelry App! This project aims to provide a seamless and enjoyable experience for users to browse, purchase, and manage their jewelry collections. Below are the key objectives of this app:
+Welcome to the Velora Jewellery App! This project aims to provide a seamless and enjoyable experience for users to browse, purchase, and manage their jewelry collections. Below are the key objectives of this app:
 
 
 Objectives
