@@ -43,8 +43,7 @@ and enjoyable to browse, buy, and manage your jewelry collection.
 
 ## 🎬 Demo
 
-https://drive.google.com/file/d/12PELReIXdex_UIKYW8rlDXYFvderwSRr/view![image](https://github.com/user-attachments/assets/77abf6cd-74e5-49e5-9e37-e9794b8c61f8)
-Prototype: https://drive.google.com/file/d/1H0Ljm0RKC-1CNnwhiN7mEsuz6OZ44j7d/view![image](https://github.com/user-attachments/assets/1972fdfb-a81b-4721-83f2-56ba0ddb19e5)
+Prototype: https://drive.google.com/file/d/12PELReIXdex_UIKYW8rlDXYFvderwSRr/view![image](https://github.com/user-attachments/assets/0be33db2-c147-410d-bdf8-a730b25c7076)
 
 
 
