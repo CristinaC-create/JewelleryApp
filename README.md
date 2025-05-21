@@ -54,8 +54,6 @@ and enjoyable to browse, buy, and manage your jewelry collection.
 
 - **SwiftUI** for the iOS interface  
 - **MVVM architecture** for clean separation of concerns  
-- **Firebase / CloudKit** (optional) for backend and user data  
-- **CoreData** or **UserDefaults** for local storage  
 - **Custom Icons & Styling** for a luxurious shopping vibe
 
 ---
