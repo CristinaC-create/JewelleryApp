@@ -1,5 +1,3 @@
-
-
 💎 Velora Jewellery App
 
 Welcome to the Velora Jewellery App — a beautifully designed shopping experience for jewelery lovers. This project is all about making it easy, secure, and enjoyable to browse, buy, and manage your jewelry collection.
@@ -48,4 +46,4 @@ Welcome to the Velora Jewellery App — a beautifully designed shopping experien
 📹 Watch the Velora Jewellery App in action: https://drive.google.com/file/d/12PELReIXdex_UIKYW8rlDXYFvderwSRr/view
 
 Prototype: https://drive.google.com/file/d/1H0Ljm
-![image](https://github.com/user-attachments/assets/13edaf88-d32d-4bcf-aed3-5129690eba0e)
+![image](https://github.com/user-attachments/assets/f4116003-5e7d-42eb-8319-9d9722463834)
