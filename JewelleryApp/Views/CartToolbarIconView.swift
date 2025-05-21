@@ -7,12 +7,27 @@
 
 import SwiftUI
 
-struct CartToolbarIconView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
 
-#Preview {
-    CartToolbarIconView()
+struct CartToolbarIcon: View {
+    @EnvironmentObject var cartManager: CartManager
+
+    var body: some View {
+        NavigationLink(destination: CartView()) {
+            ZStack(alignment: .topTrailing) {
+                Image(systemName: "cart")
+                    .font(.system(size: 22, weight: .semibold))
+                    .foregroundColor(.colorbackground)
+
+                if cartManager.items.count > 0 {
+                    Text("\(cartManager.items.count)")
+                        .font(.caption2)
+                        .foregroundColor(.white)
+                        .padding(5)
+                        .background(Color.red)
+                        .clipShape(Circle())
+                        .offset(x: 10, y: -10)
+                }
+            }
+        }
+    }
 }

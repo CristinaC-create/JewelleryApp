@@ -4,76 +4,112 @@
 //
 //  Created by Cristina Cabral on 2025-02-05.
 //
-
 import SwiftUI
 
+
 struct LoginView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @State private var email = ""
+    @State private var password = ""
+    @State private var isSecure = true
+    @State private var navigateToProductPage = false
+
+    @EnvironmentObject var cartManager: CartManager  // 👈 VERY important!
 
     var body: some View {
-        ZStack {
-            VStack {
-                // Login Button (Top Right)
-                HStack {
-                    
-                }
+        NavigationStack {
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
 
-                
-                Spacer()
-                
-                // Subtitle with Icons on Both Sides
-                HStack {
-                    Text("VELORA JEWELERY")
-                        .font(.system(size: 30, weight: .medium))
-                        .foregroundColor(.gray)
-                        .padding(.bottom, 50)
-                }
-       
-                
-                // Email Field
-                TextField("EMAIL:", text: $email)
-                    .font(.system(size: 20, weight: .medium))
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 40)
-                
-                // Password Field
-                SecureField("PASSWORD:", text: $password)
-                    .font(.system(size: 20, weight: .medium))
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
-                
-                // Login Button
-                Button(action: {
-                    print("Login button tapped")
-                }) {
-                    Text("Login")
-                        .font(.system(size: 25, weight: .medium))
-                        .foregroundColor(.white)
+                VStack(spacing: 20) {
+                    Spacer()
+
+                    Text("VELORA JEWELLERY")
+                        .font(.system(size: 28, weight: .bold))
+                        .foregroundColor(.colorbackground)
+                        .multilineTextAlignment(.center)
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Email:")
+                            .foregroundColor(.colorbackground)
+                        TextField("Enter your email", text: $email)
+                            .padding()
+                            .background(Color.white.opacity(0.9))
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal)
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Password:")
+                            .foregroundColor(.colorbackground)
+                        HStack {
+                            if isSecure {
+                                SecureField("Enter your password", text: $password)
+                            } else {
+                                TextField("Enter your password", text: $password)
+                            }
+                            Button {
+                                isSecure.toggle()
+                            } label: {
+                                Image(systemName: isSecure ? "eye.slash" : "eye")
+                                    .foregroundColor(.colorbackground)
+                            }
+                        }
                         .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.gray)
-                        .cornerRadius(5.0)
-                }
-                .padding(.bottom, 50)
-                
+                        .background(Color.white.opacity(0.9))
+                        .cornerRadius(10)
+                    }
+                    .padding(.horizontal)
 
-                
-               
-                .padding(.bottom, 20) // Adjust this padding to move the button up
-                
-                Spacer()
+                    Button("Forgot Password?") {
+                        print("Forgot password tapped")
+                    }
+                    .foregroundColor(.colorbackground)
+                    .font(.footnote)
+
+                    Button {
+                        navigateToProductPage = true
+                    } label: {
+                        Text("Login")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.colorbackground.opacity(0.7))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding(.horizontal)
+
+                    HStack {
+                        Text("Don't have an account?")
+                            .foregroundColor(.colorbackground)
+                        NavigationLink(destination: SignUpView()) {
+                            Text("Sign Up")
+                                .fontWeight(.semibold)
+                                .foregroundColor(.colorbackground)
+                        }
+                    }
+
+                    Spacer()
+                }
+                .frame(maxWidth: 400)
+                .padding(.top, 40)
             }
-            .padding(.top, 40)
-            .padding(.horizontal, 30)
+            .navigationTitle("")
+            .navigationBarHidden(true)
+
+            // ✅ Navigation fixed with EnvironmentObject
+            .navigationDestination(isPresented: $navigateToProductPage) {
+                ProductPageView()
+                    .environmentObject(cartManager)  // 👈 FIX: Pass cartManager when navigating!
+            }
         }
     }
 }
 
 #Preview {
     LoginView()
+        .environmentObject(CartManager())
 }

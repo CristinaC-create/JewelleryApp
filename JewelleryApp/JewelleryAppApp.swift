@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct JewelleryAppApp: App {
+    @StateObject private var cartManager = CartManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(cartManager)
         }
     }
 }

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+struct WishlistItem: Identifiable {
+    let id: Int
+    let name: String
+    let price: String
+    let image: String
+}

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		F374685F2D543F3200EB459B /* JewelleryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JewelleryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F374685F2D543F3200EB459B /* Velora Jewellery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Velora Jewellery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -29,18 +29,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DADE6F9E3AAD6B93233FA693 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F37468562D543F3200EB459B = {
 			isa = PBXGroup;
 			children = (
 				F37468612D543F3200EB459B /* JewelleryApp */,
 				F37468602D543F3200EB459B /* Products */,
+				DADE6F9E3AAD6B93233FA693 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		F37468602D543F3200EB459B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F374685F2D543F3200EB459B /* JewelleryApp.app */,
+				F374685F2D543F3200EB459B /* Velora Jewellery.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +56,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F374685E2D543F3200EB459B /* JewelleryApp */ = {
+		F374685E2D543F3200EB459B /* Velora Jewellery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F374686D2D543F3400EB459B /* Build configuration list for PBXNativeTarget "JewelleryApp" */;
+			buildConfigurationList = F374686D2D543F3400EB459B /* Build configuration list for PBXNativeTarget "Velora Jewellery" */;
 			buildPhases = (
 				F374685B2D543F3200EB459B /* Sources */,
 				F374685C2D543F3200EB459B /* Frameworks */,
@@ -63,11 +71,9 @@
 			fileSystemSynchronizedGroups = (
 				F37468612D543F3200EB459B /* JewelleryApp */,
 			);
-			name = JewelleryApp;
-			packageProductDependencies = (
-			);
+			name = "Velora Jewellery";
 			productName = JewelleryApp;
-			productReference = F374685F2D543F3200EB459B /* JewelleryApp.app */;
+			productReference = F374685F2D543F3200EB459B /* Velora Jewellery.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -78,14 +84,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					F374685E2D543F3200EB459B = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = F374685A2D543F3200EB459B /* Build configuration list for PBXProject "JewelleryApp" */;
+			buildConfigurationList = F374685A2D543F3200EB459B /* Build configuration list for PBXProject "Velora Jewellery" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +105,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F374685E2D543F3200EB459B /* JewelleryApp */,
+				F374685E2D543F3200EB459B /* Velora Jewellery */,
 			);
 		};
 /* End PBXProject section */
@@ -253,6 +259,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JewelleryApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Velora Jewellery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -305,7 +312,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F374685A2D543F3200EB459B /* Build configuration list for PBXProject "JewelleryApp" */ = {
+		F374685A2D543F3200EB459B /* Build configuration list for PBXProject "Velora Jewellery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F374686B2D543F3400EB459B /* Debug */,
@@ -314,7 +321,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F374686D2D543F3400EB459B /* Build configuration list for PBXNativeTarget "JewelleryApp" */ = {
+		F374686D2D543F3400EB459B /* Build configuration list for PBXNativeTarget "Velora Jewellery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F374686E2D543F3400EB459B /* Debug */,

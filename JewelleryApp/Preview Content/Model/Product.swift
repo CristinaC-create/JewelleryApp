@@ -6,12 +6,9 @@
 //
 
 import Foundation
-import SwiftUI
-import SwiftData
 
-
-struct MyProduct: Identifiable {
-    let id = UUID()
+struct MyProduct: Identifiable, Hashable {
+    let id: UUID = UUID() // ✅ must be stable and unique
     let name: String
     let price: Double
     let description: String
@@ -19,4 +16,12 @@ struct MyProduct: Identifiable {
     let category: String
     let originalPrice: Double
     let discountPercentage: Int?
+
+    static func == (lhs: MyProduct, rhs: MyProduct) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

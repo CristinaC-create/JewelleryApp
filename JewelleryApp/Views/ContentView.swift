@@ -7,82 +7,94 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            // Background Image
-            Image("background") // Replace with your background image asset
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
-                // Login Button (Top Right)
-                HStack {
-                    Spacer() // Pushes "LOGIN" to the right
-                    Text("Login")
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.gray)
-                        .padding(.trailing, 45)
-                }
-                .padding(.top, 50)
-                
-                Spacer()
-                
-                // Welcome Text
-                Text("WELCOME")
-                    .font(.system(size: 25, weight: .bold))
-                    .foregroundColor(.gray)
-                    .padding(.bottom, 60) // Adjust this padding to move the text up
-                
-                // Subtitle with Icons on Both Sides
-                HStack {
-                    Image(systemName: "diamond.circle.fill") // Left icon
-                        .font(.system(size: 20))
-                        .foregroundColor(.gray)
-                    Text("VELORA JEWELERY")
-                        .font(.system(size: 20, weight: .medium))
-                        .foregroundColor(.gray)
-                    Image(systemName: "diamond.circle.fill") // Right icon
-                        .font(.system(size: 20))
-                        .foregroundColor(.gray)
-                }
-                .padding(.bottom, 45) // Adjust this padding to move the text up
-                
-                // Featured Image
-                Image("featured") // Replace with your jewelry image
+        NavigationStack {
+            ZStack {
+                Image("background")
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 300, height: 180)
-                    .clipShape(Rectangle())
-                    .padding(.bottom, 120) // Adjust this padding to move the image up
-                
-                Spacer()
-                
-                // Sign Up Text
-                Text("SIGN UP TO\nGET NOTIFIED!")
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundColor(.gray)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 20) // Adjust this padding to move the text up
-                
-                // Arrow Button
-                Button(action: {
-                    print("Navigate Down")
-                }) {
-                    Image(systemName: "chevron.down.circle")
-                        .font(.largeTitle)
-                        .foregroundColor(.gray)
+                    .scaledToFill()
+                    .ignoresSafeArea()
+
+                VStack {
+                    Spacer()
+
+                    // Welcome Text
+                    Text("WELCOME")
+                        .font(.system(size: 30, weight: .bold))
+                        .foregroundColor(.colorbackground)
+                        .padding(.bottom, 60)
+
+                    // Subtitle with Icons
+                    HStack {
+                        Image(systemName: "diamond.circle.fill")
+                            .font(.system(size: 20))
+                            .foregroundColor(.colorbackground)
+                        Text("VELORA JEWELLERY")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(.colorbackground)
+                        Image(systemName: "diamond.circle.fill")
+                            .font(.system(size: 20))
+                            .foregroundColor(.colorbackground)
+                    }
+                    .padding(.bottom, 45)
+
+                    // Featured Image
+                    Image("featured")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 220)
+                        .clipShape(Rectangle())
+                        .padding(.bottom, 120)
+
+                    Spacer()
+
+                    // Sign Up Text
+                    Text("SIGN UP TO\nGET NOTIFIED!")
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(.colorbackground)
+                        .multilineTextAlignment(.center)
+                        .padding(.bottom, 20)
+
+                    // Sign-Up Button
+                    NavigationLink(destination: SignUpView()) {
+                        Image(systemName: "chevron.down.circle")
+                            .font(.largeTitle)
+                            .foregroundColor(.colorbackground)
+                    }
+                    .padding(.bottom, 20)
+
+                    Spacer()
                 }
-                .padding(.bottom, 20) // Adjust this padding to move the button up
-                
-                Spacer()
+                .padding(.top, 40)
+
+                // Top-right Login Button
+                VStack {
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: LoginView()) {
+                            Text("Login")
+                                .font(.system(size: 16, weight: .medium))
+                                .foregroundColor(.colorbackground)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                        }
+                    }
+                    Spacer()
+                }
+                .padding(.top, 10)
+                .padding(.trailing, 110)
             }
-            .padding(.top, 40)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
     }
 }
 
+// MARK: - Preview
 #Preview {
     ContentView()
-}
+            .environmentObject(CartManager())
+    }
+
