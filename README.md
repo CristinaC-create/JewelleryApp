@@ -45,7 +45,7 @@ and enjoyable to browse, buy, and manage your jewelry collection.
 
 [Prototype: https://drive.google.com/file/d/12PELReIXdex_UIKYW8rlDXYFvderwSRr/view![image](https://github.com/user-attachments/assets/0be33db2-c147-410d-bdf8-a730b25c7076)](https://drive.google.com/file/d/12PELReIXdex_UIKYW8rlDXYFvderwSRr/view)
 
-[https://drive.google.com/drive/u/0/home](https://drive.google.com/file/d/1H0Ljm0RKC-1CNnwhiN7mEsuz6OZ44j7d/view)
+(https://drive.google.com/file/d/1H0Ljm0RKC-1CNnwhiN7mEsuz6OZ44j7d/view)
 
 
 ---
