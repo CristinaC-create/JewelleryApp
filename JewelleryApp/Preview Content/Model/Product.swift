@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
+import SwiftData
+
+
+struct MyProduct: Identifiable {
+    let id = UUID()
+    let name: String
+    let price: Double
+    let description: String
+    let imageName: String
+    let category: String
+    let originalPrice: Double
+    let discountPercentage: Int?
+}
